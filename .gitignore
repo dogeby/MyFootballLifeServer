@@ -36,4 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
+### API Key ###
 src/main/kotlin/com/example/myfootballlifeserver/ApiKey.kt
+
+### Firebase Adminsdk Json ###
+src/main/resources/myfootballlife-firebase-adminsdk.json
