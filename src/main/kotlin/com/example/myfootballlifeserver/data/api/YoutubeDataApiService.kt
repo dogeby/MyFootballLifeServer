@@ -32,5 +32,5 @@ interface YoutubeDataApiService {
 
     /** https://developers.google.com/youtube/v3/docs/videos/list?hl=ko */
     @GET("videos")
-    suspend fun requestListVideos(@Query("id") id:String? = null, @Query("part")part: String = "snippet, contentDetails, statistics", @Query("key") key: String = YOUTUBE_DATA_API_KEY): VideosResponseBody
+    suspend fun requestListVideos(@Query("id") id:String? = null, @Query("pageToken") pageToken: String? = null, @Query("part")part: String = "snippet, contentDetails, statistics", @Query("key") key: String = YOUTUBE_DATA_API_KEY): VideosResponseBody
 }
