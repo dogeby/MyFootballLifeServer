@@ -19,8 +19,8 @@ class YoutubeRepository {
     @Autowired
     private lateinit var localPropertiesRepository: LocalPropertiesRepository
     companion object {
-        const val YOUTUBE_LATEST_VIDEO_FILE_NAME = "youtubeLatestVideo.properties"
-        const val YOUTUBE_UPLOADS_PLAYLIST_FILE_NAME = "youtubeUploadsPlaylist.properties"
+        const val YOUTUBE_LATEST_VIDEO_FILE_NAME = "./src/main/resources/youtubeLatestVideo.properties"
+        const val YOUTUBE_UPLOADS_PLAYLIST_FILE_NAME = "./src/main/resources/youtubeUploadsPlaylist.properties"
     }
     /** Channels **/
     suspend fun getChannels(ids: List<String>): List<Channels> {

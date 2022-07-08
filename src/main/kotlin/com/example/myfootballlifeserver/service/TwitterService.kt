@@ -1,24 +1,23 @@
 package com.example.myfootballlifeserver.service
 
+import com.example.myfootballlifeserver.data.models.team.Team
+import com.example.myfootballlifeserver.repositories.TeamInfoRepository
 import com.example.myfootballlifeserver.repositories.TwitterRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
 
 @Service
 class TwitterService {
     @Autowired
     lateinit var twitterRepository: TwitterRepository
-    @Value("\${TEAM_OFFICIAL_TWITTER_USER_ID_LIST}")
-    lateinit var teamOfficialTwitterIdList:List<String>
-    @Value("\${REPORTER_TWITTER_USER_ID_LIST}")
-    lateinit var reporterTwitterIdList:List<String>
+    @Autowired
+    lateinit var teamInfoRepository: TeamInfoRepository
 
     fun requestLatestUsers() {
-        val twitterIdList = teamOfficialTwitterIdList + reporterTwitterIdList
+        val twitterIdList = getTwitterIdList()
         GlobalScope.launch(Dispatchers.IO) {
             val users = twitterRepository.getUsers(twitterIdList)
             if(users.isNotEmpty()) {
@@ -28,14 +27,21 @@ class TwitterService {
     }
 
     fun requestLatestTweets(){
-        val twitterIdList = teamOfficialTwitterIdList + reporterTwitterIdList
+        val twitterIdList = getTwitterIdList()
         GlobalScope.launch(Dispatchers.IO) {
-            twitterIdList.forEach { userId->
+            twitterIdList.forEach { userId ->
                 val tweets = twitterRepository.getTweets(userId)
-                if(tweets.isNotEmpty()) {
+                if (tweets.isNotEmpty()) {
                     twitterRepository.insertTweets(userId, tweets)
                 }
             }
         }
     }
+
+    private fun getTwitterIdList() =
+        teamInfoRepository.teamBody.teams.fold<Team, MutableList<String>>(mutableListOf()) { acc, team ->
+            team.officialTwitterUserId?.let { acc.add(it) }
+            team.reporterTwitterUserId?.let { acc.addAll(it) }
+            acc
+        }.toList()
 }

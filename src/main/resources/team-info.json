@@ -1,0 +1,108 @@
+{
+  "teams": [
+    {
+      "name": "ars",
+      "officialTwitterUserId": "34613288",
+      "officialYoutubeChannelId": "UCpryVRk_VDudG8SHXgWcG0w",
+      "reporterTwitterUserId": [
+        21107160
+      ]
+    },
+    {
+      "name": "CHE",
+      "officialTwitterUserId": "22910295",
+      "officialYoutubeChannelId": "UCU2PacFf99vhb3hNiYDmxww",
+      "reporterTwitterUserId": [
+        130918844
+      ]
+    },
+    {
+      "name": "LIV",
+      "officialTwitterUserId": "19583545",
+      "officialYoutubeChannelId": "UC9LQwHZoucFT94I2h6JOcjw",
+      "reporterTwitterUserId": [
+        265653022
+      ]
+    },
+    {
+      "name": "MCI",
+      "officialTwitterUserId": "14573900",
+      "officialYoutubeChannelId": "UCkzCjdRMrW2vXLx8mvPVLdQ",
+      "reporterTwitterUserId": [
+        326125935
+      ]
+    },
+    {
+      "name": "MUN",
+      "officialTwitterUserId": "558797310",
+      "officialYoutubeChannelId": "UC6yW44UGJJBvYTlfC7CRg2Q",
+      "reporterTwitterUserId": [
+        49942908
+      ]
+    },
+    {
+      "name": "TOT",
+      "officialTwitterUserId": "121402638",
+      "officialYoutubeChannelId": "UCEg25rdRZXg32iwai6N6l0w",
+      "reporterTwitterUserId": [
+        4653929363
+      ]
+    },
+    {
+      "name": "FCB",
+      "officialTwitterUserId": "96951800",
+      "officialYoutubeChannelId": "UC14UlmYlSNiQCBe9Eookf_A",
+      "reporterTwitterUserId": [
+        106797159
+      ]
+    },
+    {
+      "name": "RMA",
+      "officialTwitterUserId": "452155423",
+      "officialYoutubeChannelId": "UCWV3obpZVGgJ3j9FVhEjF2Q",
+      "reporterTwitterUserId": [
+        68435162
+      ]
+    },
+    {
+      "name": "INT",
+      "officialTwitterUserId": "2444556654",
+      "officialYoutubeChannelId": "UCvXzEblUa0cfny4HAJ_ZOWw",
+      "reporterTwitterUserId": [
+        466499074
+      ]
+    },
+    {
+      "name": "JUV",
+      "officialTwitterUserId": "1638021792",
+      "officialYoutubeChannelId": "UCLzKhsxrExAC6yAdtZ-BOWw",
+      "reporterTwitterUserId": [
+        278616610
+      ]
+    },
+    {
+      "name": "MIL",
+      "officialTwitterUserId": "186386857",
+      "officialYoutubeChannelId": "UCKcx1uK38H4AOkmfv4ywlrg",
+      "reporterTwitterUserId": [
+        445092879
+      ]
+    },
+    {
+      "name": "BAY",
+      "officialTwitterUserId": "2152685876",
+      "officialYoutubeChannelId": "UCZkcxFIsqW5htimoUQKA0iA",
+      "reporterTwitterUserId": [
+        2565047206
+      ]
+    },
+    {
+      "name": "PSG",
+      "officialTwitterUserId": "3001704118",
+      "officialYoutubeChannelId": "UCt9a_qP9CqHCNwilf-iULag",
+      "reporterTwitterUserId": [
+        263086537
+      ]
+    }
+  ]
+}

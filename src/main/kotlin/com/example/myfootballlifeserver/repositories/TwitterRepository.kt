@@ -17,7 +17,7 @@ class TwitterRepository {
     @Autowired
     private lateinit var localPropertiesRepository: LocalPropertiesRepository
     companion object {
-        const val TWITTER_LATEST_TWEET_FILE_NAME = "twitterLatestTweet.properties"
+        const val TWITTER_LATEST_TWEET_FILE_NAME = "./src/main/resources/twitterLatestTweet.properties"
     }
     /** User **/
     suspend fun getUsers(userIds:List<String>): List<Users> { //userId 100개까지 가능
